@@ -1,0 +1,20 @@
+﻿@model  TaskItem
+
+<form asp-action="EnterTask" method="post">
+    <label asp-for="TaskDescription">Task Name</label>
+    <input asp-for="TaskDescription" />
+    <br />
+
+    <label asp-for="Urgent">Urgent?</label>
+    <input type="checkbox" asp-for="Urgent"/>
+    <br />
+
+    <label asp-for="Important">Important?</label>
+    <input type="checkbox" asp-for="Important"/>
+    <br />
+
+    <button type="submit">Add Task</button>
+    <br />
+    <br />
+    <div asp-validation-summary="All"></div>
+</form>
